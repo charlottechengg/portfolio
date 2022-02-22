@@ -1,12 +1,10 @@
-import Intro from './components/Intro';
 import './App.css';
-import Appbar from './components/Appbar';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <Appbar/>
-      <Intro/>
+      <Home/>
 
     </div>
   );

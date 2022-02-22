@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 // import { amber } from '@mui/material/colors';
 
-const pages = ['About', 'Projects', 'Skils','Contacts'];
+const pages = ['About', 'Projects', 'Skills','Contacts'];
 // const useStyles = makeStyles(theme => ({
 //     root: {
 //       boxShadow: "none",
@@ -22,20 +22,14 @@ const pages = ['About', 'Projects', 'Skils','Contacts'];
 //     }
 //   }));
 
-const Appbar = () => {
+const Appbar = ({setTheme}) => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
-    };
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
     };
 
     const pagesOnClick = (page) => {
@@ -43,7 +37,7 @@ const Appbar = () => {
     }
 
 
-    return (<AppBar position="static" sx={{ bgcolor: "#222222" }}>
+    return (<AppBar position="sticky" sx={{ bgcolor: "#222222" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -59,8 +53,8 @@ const Appbar = () => {
         }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{
             display: { xs: 'block', md: 'none' },
         }}>
-              {pages.map((page) => (<MenuItem key={page} onClick={() => pagesOnClick(page)}>
-                  <Typography textAlign="center">{page}</Typography>
+              {pages.map((page) => (<MenuItem sx={{ color: "#222222" }} key={page} onClick={() => pagesOnClick(page)}>
+                  <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>))}
             </Menu>
           </Box>
@@ -71,6 +65,13 @@ const Appbar = () => {
             {pages.map((page) => (<Button key={page} onClick={() => pagesOnClick(page)} sx={{ my: 2, display: 'block', color: 'white'}}>
                 {page}
               </Button>))}
+          </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
+              <Button onClick={setTheme} sx={{ my: 2, display: 'block', color: 'white'}}>
+                  Theme
+              </Button>
+
           </Box>
         </Toolbar>
       </Container>
