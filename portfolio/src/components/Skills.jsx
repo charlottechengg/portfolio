@@ -14,9 +14,7 @@ const SkillSection = ({skills}) => {
         <ListItem
         key={value}
         disablePadding>
-            <li >
                 <Typography variant="h5">{value}</Typography>
-            </li>
         </ListItem>
     ))}
     </List>
