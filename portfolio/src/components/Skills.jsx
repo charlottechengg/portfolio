@@ -1,24 +1,51 @@
 import React, { useEffect, useState } from "react";
-import { Button, Typography, CssBaseline} from '@mui/material';
+import { Button, Typography, List, ListItem, Grid, Paper} from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Add as AddIcon } from '@mui/icons-material';
 
-const Intro = () => {
+const skillList1 = ["JavaScript", "Python", "Bash", "Java", "Go"]
+const skillList2 = ["Swift", "React.js", "Express.js", "Matlab", "SQL"]
+const skillList3 = ["Git", "AWS", "Docker", "Jenkins", "Openshift"]
+
+const SkillSection = ({skills}) => {
+    return(
+    <List>
+    {skills.map((value) => (
+        <ListItem
+        key={value}
+        disablePadding>
+            <li >
+                <Typography variant="h5">{value}</Typography>
+            </li>
+        </ListItem>
+    ))}
+    </List>
+    )
+};
+
+
+const Skills = () => {
 
     return (
-        <ThemeProvider theme={themeDark}>
-            <CssBaseline />
             <Box
-                justifyContent="center" component="span"
-                sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)', width:'60vw'}}
+                justifyContent="center" component="span" mt={5}
+                sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
             >
-                <Typography inline variant="h3" align="left" color="textPrimary" >👋 Hello! I am</Typography>
-                <Typography inline variant="h1" align="left" gutterBottom='true' color="textPrimary">Charlotte Cheng,</Typography>
-                <Typography inline variant="h3" align="left"  gutterBottom='true' color="textPrimary">and I am a third year Software Engineering student at McMaster University.</Typography>
-                <Typography inline variant="h3" align="left" color="textPrimary">I am currently working as a Junior Backend Developer / Devops Engineer at IBM. I've also volunteered at Illetonna as a NLP Program Manager in the past.</Typography>
+                <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>My Backpack</Typography>
+                <Grid container direction="row" alignItems="flex-start" spacing={2}>
+                    <Grid item xs={4}>
+                        <SkillSection skills={skillList1}/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <SkillSection skills={skillList2}/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <SkillSection skills={skillList3}/>
+                    </Grid>
+                </Grid>
             </Box>
-        </ThemeProvider>
     );
 };
-export default Intro;
+export default Skills;
+
+

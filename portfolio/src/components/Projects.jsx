@@ -1,83 +1,78 @@
-import { Canvas, useFrame } from '@react-three/fiber';
-import React, { Suspense } from 'react';
-import { OrbitControls, Stars } from '@react-three/drei';
-import { Physics, useBox, usePlane } from '@react-three/cannon';
-import { MeshDistortMaterial, Sphere } from "@react-three/drei";
+import React, { useEffect, useState } from "react";
+import { Button, Typography, Card, Grid, Paper, CardActions,CardContent, IconButton} from '@mui/material';
+import Box from '@mui/material/Box';
+import { makeStyles } from "@mui/material/styles";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-
-const Box = () => {
-  const [ref] = useBox(() => ({ mass: 1, position: [0, 2, 0] }));
-  return (
-    <mesh ref={ref}>
-      <boxBufferGeometry attach='geometry' />
-      <meshLambertMaterial attach='material' color='hotpink' />
-    </mesh>
-  )
+const project1 = {
+  "ProjectName": "FocusSpace",
+  "Subtitle": "ElleHacks 2022 (Telus) First Place",
+  "Description": "It is an innovative iOS app to help the community beat procrastination and focus with friends. It also encourages people to take some rest during their work, helping remote employees to disconnect from their work.",
+  "Tech":["Swift 5", "SwiftUI", "CockroachDB", "Figma"],
+  "GithubLink":"https://github.com/manyicheng/FocusSpace",
+}
+const project2 = {
+  "ProjectName": "Friday",
+  "Subtitle": "StormHacks2022 - Best Use of Google Cloud & Audience First Choice",
+  "Description": "A web application to analyze sentiments and entities from user's text journal or audio journal, helping people with depression to identity their stressors. It also conveniently provides a standard depression screening for you to test.",
+  "Tech":["React.js", "Express.js", "Firebase", "Google Cloud NL API", "Typescript", "AssemblyAI"],
+  "GithubLink":"https://github.com/manyicheng/Friday",
 }
 
-
-const Plane = () => {
-  const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0] }));
-  return (
-    <mesh ref={ref} rotation={[-Math.PI / 2, 0, 0]}>
-      <planeBufferGeometry attach='geometry' args={[100, 100]} />
-      <meshLambertMaterial attach='material' color='lightblue' />
-    </mesh>
-  )
+const project3 = {
+  "ProjectName": "HelpDoc!",
+  "Subtitle": "StormHacks2022 - Best Use of Google Cloud & Audience First Choice",
+  "Description": "A simple web app that records and transcribes the speech from a patient to a doctor, or vice versa. It is able to translate various languages.",
+  "Tech":["React.js", "AssemblyAI"],
+  "GithubLink":"https://github.com/manyicheng/help-doc",
 }
 
+const ProjectCard = ({projectInfo}) => {
+    return(
+      <Card inline sx={{ bgcolor: "#262626" }}>
+        <CardContent display="inline" align="left">
+        <Typography variant="h4" gutterBottom>
+          {projectInfo["ProjectName"]}
+        </Typography>
+        <Typography variant="h6" sx={{ mb: 1.5 }} >
+          {projectInfo["Subtitle"]}
+        </Typography>
+        <Typography variant="h6">
+          {projectInfo["Description"]}
+        </Typography>
+        </CardContent>
+        <CardActions disableSpacing>
+          <IconButton >
+            <GitHubIcon style={{ color: '#ffffff'}} />
+          </IconButton>
+        </CardActions>
+      </Card>
 
-const AnimatedSphere = () => {
-  return (
-    <Sphere visible args={[1, 100, 200]} scale={2}>
-      <MeshDistortMaterial
-        color="#423F3E"
-        attach="material"
-        distort={0.3}
-        speed={1.5}
-        roughness={0}
-      />
-    </Sphere>
-  )
-}
-
-
-function MyRotatingBox() {
-  const myMesh = React.useRef();
-
-  useFrame(({ clock }) => {
-    const a = clock.getElapsedTime();
-    myMesh.current.rotation.x = a;
-  });
-
-  return (
-    <mesh ref={myMesh}>
-      <boxBufferGeometry />
-      <meshPhongMaterial color="royalblue" />
-    </mesh>
-  );
-}
+    )
+};
 
 
-const Sphere3D = () => {
-  return (
-    <div style={{ height: '100vh', width: '100vw', backgroundColor: 'black', display: 'flex', justifyContent: 'space-evenly' }}>
-      <Canvas clasName="canvas">
-        <OrbitControls />
-        <Stars />
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-2, 5, 2]} />
-        <Suspense fallback={null}>
-          <AnimatedSphere />
-        </Suspense>
+const Projects = () => {
+    return (
+            <Box
+                justifyContent="center" component="span" mt={10}
+                sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
+            >
+                <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>Feature Projects</Typography>
+                <Grid container direction="row" alignItems="stretch" spacing={2}>
+                    <Grid item xs={6} style={{display: 'flex'}}>
+                        <ProjectCard style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} projectInfo={project1}/>
+                    </Grid>
+                    <Grid item xs={6} style={{display: 'flex'}}>
+                        <ProjectCard style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} projectInfo={project2}/>
+                    </Grid>
+                    <Grid item xs={6} style={{display: 'flex'}}>
+                        <ProjectCard style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} projectInfo={project3}/>
+                    </Grid>
+                </Grid>
+            </Box>
+    );
+};
+export default Projects;
 
-      </Canvas>
-      <div>
-      </div>
 
-
-    </div>
-  )
-}
-
-export default Sphere3D;

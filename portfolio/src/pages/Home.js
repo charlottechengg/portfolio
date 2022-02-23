@@ -1,8 +1,11 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Intro from '../components/Intro';
 import Appbar from '../components/Appbar';
 import React from "react";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import { Icon } from "@mui/material";
 
 function Home() {
     let themeDark = createTheme()
@@ -14,24 +17,18 @@ function Home() {
           }
         },
         typography: {
-            h1: {
-                fontSize: '2.9rem',
-                '@media (min-width:600px)': {
-                    fontSize: '2.9rem',
-                },
-                [themeDark.breakpoints.up('md')]: {
-                    fontSize: '6.8rem',
-                },
-            },
-            h3:{
-                fontSize: '1.1rem',
-                '@media (min-width:600px)': {
-                    fontSize: '1.2rem',
-                },
-                [themeDark.breakpoints.up('md')]: {
-                    fontSize: '2.2rem',
-                },
-            },
+          h1: {
+            fontWeight: 'bold',
+            fontSize: '6.6rem',
+          },
+          h2: {
+            fontWeight: 'bold',
+            fontSize: '3.3rem',
+          },
+          h3: {
+            fontWeight: 'bold',
+            fontSize: '2.5rem',
+          },
         },
       });
 
@@ -42,29 +39,29 @@ function Home() {
           },
           text: {
             primary: "#ffffff"
-          }
+          },
         },
         typography: {
             h1: {
-                fontSize: '2.9rem',
-                '@media (min-width:600px)': {
-                    fontSize: '2.9rem',
-                },
-                [themeDark.breakpoints.up('md')]: {
-                    fontSize: '6.8rem',
-                },
+              fontWeight: 'bold',
+              fontSize: '6.6rem',
             },
-            h3:{
-                fontSize: '1.1rem',
-                '@media (min-width:600px)': {
-                    fontSize: '1.2rem',
-                },
-                [themeDark.breakpoints.up('md')]: {
-                    fontSize: '2.2rem',
-                },
+            h2: {
+              fontWeight: 'bold',
+              fontSize: '3.3rem',
+            },
+            h3: {
+              fontWeight: 'bold',
+              fontSize: '2.5rem',
             },
         },
-      });
+        buttonIcon: {
+          color: "#ffffff",
+      },
+    });
+
+    themeDark = responsiveFontSizes(themeDark);
+    themeLight = responsiveFontSizes(themeLight);
 
 
     const [light, setLight] = React.useState(false);
@@ -75,6 +72,8 @@ function Home() {
     <div className="App">
       <Appbar setTheme={() => setLight(!light)}/>
       <Intro/>
+      <Skills/>
+      <Projects/>
 
     </div>
     </ThemeProvider>
