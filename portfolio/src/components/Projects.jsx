@@ -29,7 +29,7 @@ const project3 = {
 
 const ProjectCard = ({projectInfo}) => {
     return(
-      <Card inline sx={{ bgcolor: "#262626" }}>
+      <Card style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}  sx={{ bgcolor: "#262626" }}>
         <CardContent display="inline" align="left">
         <Typography variant="h4" gutterBottom>
           {projectInfo["ProjectName"]}
@@ -61,13 +61,13 @@ const Projects = () => {
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>Feature Projects</Typography>
                 <Grid container direction="row" alignItems="stretch" spacing={2}>
                     <Grid item xs={6} style={{display: 'flex'}}>
-                        <ProjectCard style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} projectInfo={project1}/>
+                        <ProjectCard projectInfo={project1}/>
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex'}}>
-                        <ProjectCard style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} projectInfo={project2}/>
+                        <ProjectCard  projectInfo={project2}/>
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex'}}>
-                        <ProjectCard style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}} projectInfo={project3}/>
+                        <ProjectCard projectInfo={project3}/>
                     </Grid>
                 </Grid>
             </Box>
