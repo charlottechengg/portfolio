@@ -11,16 +11,11 @@ import Face from '@mui/icons-material/Face';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import {Link} from 'react-scroll'
 
-// import { amber } from '@mui/material/colors';
 
-const pages = ['About', 'Projects', 'Skills','Contacts'];
-// const useStyles = makeStyles(theme => ({
-//     root: {
-//       boxShadow: "none",
-//       backgroundColor: "black"
-//     }
-//   }));
+
+const pages = ['about','skills', 'projects','contacts'];
 
 const Appbar = ({setTheme}) => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -62,15 +57,17 @@ const Appbar = ({setTheme}) => {
             Portfolio
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (<Button key={page} onClick={() => pagesOnClick(page)} sx={{ my: 2, display: 'block', color: 'white'}}>
+            {pages.map((page) => (<Button key={page} style={{ fontSize: '2.1vh' }} onClick={() => pagesOnClick(page)} sx={{ my: 2, display: 'block', color: 'white'}}>
+            <Link activeClass="active" to={page} offset={-80}>
                 {page}
+                </Link>
               </Button>))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-              <Button onClick={setTheme} sx={{ my: 2, display: 'block', color: 'white'}}>
+              {/* <Button onClick={setTheme} sx={{ my: 2, display: 'block', color: 'white'}}>
                   Theme
-              </Button>
+              </Button> */}
 
           </Box>
         </Toolbar>

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Typography, Card, Grid, Paper, CardActions,CardContent, IconButton} from '@mui/material';
 import Box from '@mui/material/Box';
-import { makeStyles } from "@mui/material/styles";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { ClassNames } from "@emotion/react";
 
 const project1 = {
   "ProjectName": "FocusSpace",
@@ -21,12 +19,22 @@ const project2 = {
 }
 
 const project3 = {
+  "ProjectName": "P01nter",
+  "Subtitle": "Google Vision, React.js, Express.js, Firebase, Three.js",
+  "Description": "A space for users to post, share and enjoy their special moments of life with people around the world. It utilizes google vision API to detect labels, web entity and landscape from image and label the post based on confidence score.",
+  "Tech":["React.js", "AssemblyAI"],
+  "GithubLink":"manyicheng/P01nter",
+}
+
+const project4 = {
   "ProjectName": "HelpDoc!",
-  "Subtitle": "StormHacks2022 - Best Use of Google Cloud & Audience First Choice",
+  "Subtitle": "React.js, Google Translation API, AssemblyAI",
   "Description": "A simple web app that records and transcribes the speech from a patient to a doctor, or vice versa. It is able to translate various languages.",
   "Tech":["React.js", "AssemblyAI"],
   "GithubLink":"manyicheng/help-doc",
 }
+
+
 
 const ProjectCard = ({projectInfo}) => {
     const handleGithub = (link) => {
@@ -60,7 +68,7 @@ const ProjectCard = ({projectInfo}) => {
 const Projects = () => {
     return (
             <Box
-                justifyContent="center" component="span" mt={10}
+                id="projects" justifyContent="center" component="span" mt={10}
                 sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>Feature Projects</Typography>
@@ -73,6 +81,9 @@ const Projects = () => {
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex'}}>
                         <ProjectCard projectInfo={project3}/>
+                    </Grid>
+                    <Grid item xs={6} style={{display: 'flex'}}>
+                        <ProjectCard projectInfo={project4}/>
                     </Grid>
                 </Grid>
             </Box>

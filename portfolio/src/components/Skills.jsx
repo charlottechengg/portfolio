@@ -26,7 +26,7 @@ const Skills = () => {
 
     return (
             <Box
-                justifyContent="center" component="span" mt={5}
+                id="skills" justifyContent="center" component="span" mt={5}
                 sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>My Backpack</Typography>
