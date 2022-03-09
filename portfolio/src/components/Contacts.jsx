@@ -16,33 +16,33 @@ const Contacts = () => {
         window.open(link, '_blank');
     }
     return (
-        <>
-                <Grid id="contacts" container spacing={2} mt={5} mb={2} columns={16}>
-                <Grid justifyContent="center" item xs={8}>
-                <Typography variant="h6" gutterBottom >Created by Charlotte with ❤️ </Typography>
+        <Box justifyContent="center" component="span" mt={5}
+        sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}>
+            <Grid id="contacts" container spacing={2} mt={5} mb={2} columns={16} >
+                <Grid item xs={8}>
+                    <Box justifyContent="flex-start" component="span"
+                        sx={{ display: 'flex', flexGrow: 2 }}>
+                        <Typography variant="h6" gutterBottom >Created by Charlotte with ❤️ </Typography>
+                    </Box>
                 </Grid>
                 <Grid item xs={8}>
-                <Box
-            justifyContent="center" component="span"
-            sx={{ display: 'flex', flexGrow: 2 }}
-            >
-                <List sx={{ display: 'flex', flexDirection: 'row', padding: 0}}>
-                    {contacts.map((contact) => (
-                        <ListItem
-                        key={contact.link}
-                        disablePadding>
-                            <IconButton onClick={() => handleLink(contact.link)} >
-                                <contact.icon fontSize="large" style={{ color: '#ffffff'}} />
-                            </IconButton>
-                        </ListItem>
-                    ))}
-                </List>
-                </Box>
+                    <Box justifyContent="flex-end" component="span"
+                        sx={{ display: 'flex', flexGrow: 2 }}>
+                        <List sx={{ display: 'flex', flexDirection: 'row', padding: 0}}>
+                            {contacts.map((contact) => (
+                                <ListItem key={contact.link} disablePadding>
+                                    <IconButton onClick={() => handleLink(contact.link)} >
+                                        <contact.icon fontSize="large" style={{ color: '#ffffff'}} />
+                                    </IconButton>
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Box>
                 </Grid>
 
-                </Grid>
+            </Grid>
 
-            </>
+        </Box>
     );
 };
 export default Contacts;
