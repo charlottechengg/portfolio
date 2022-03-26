@@ -13,7 +13,7 @@ function DistortPlane() {
     ref.current.distort = THREE.MathUtils.lerp(ref.current.distort, hovered ? 0.4 : 0, hovered ? 0.05 : 0.01)
   })
   return (
-    <mesh onPointerOver={() => hover(true)} onPointerOut={() => hover(false)} scale={[9, 9, 1]}>
+    <mesh onPointerOver={() => hover(true)} onPointerOut={() => hover(false)} scale={[10, 10, 1]}>
       <planeGeometry args={[1, 1, 32, 32]} />
       <MeshDistortMaterial ref={ref} speed={5}>
         <GradientTexture stops={[0]} colors={['#222222']} size={100} />
