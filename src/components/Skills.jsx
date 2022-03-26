@@ -31,13 +31,13 @@ const Skills = () => {
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>My Backpack</Typography>
                 <Grid container direction="row" alignItems="flex-start" spacing={2}>
-                    <Grid item xs={4}>
+                    <Grid item xs={6} md={4}>
                         <SkillSection skills={skillList1}/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={6} md={4}>
                         <SkillSection skills={skillList2}/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={6} md={4}>
                         <SkillSection skills={skillList3}/>
                     </Grid>
                 </Grid>

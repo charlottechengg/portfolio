@@ -19,13 +19,13 @@ const Contacts = () => {
         <Box justifyContent="center" component="span" mt={5}
         sx={{ display: 'inline-block', mx: '2px', width:'60vw'}}>
             <Grid id="contacts" container spacing={2} mt={5} mb={2} columns={16} >
-                <Grid item xs={8}>
+                <Grid item xs={16} md={8}>
                     <Box justifyContent="flex-start" component="span"
                         sx={{ display: 'flex', flexGrow: 2 }}>
                         <Typography variant="h6" gutterBottom >Created by Charlotte with ❤️ </Typography>
                     </Box>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={16} md={8}>
                     <Box justifyContent="flex-end" component="span"
                         sx={{ display: 'flex', flexGrow: 2 }}>
                         <List sx={{ display: 'flex', flexDirection: 'row', padding: 0}}>

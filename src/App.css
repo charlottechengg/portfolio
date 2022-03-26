@@ -53,13 +53,22 @@ ul, li {
 
 .canvas {
   z-index:-10;
+  position: relative;
 }
 
 .Intro {
   z-index:10;
+  top: 8vh;
   position: absolute;
-  width: 100%;
-  top:15vh;
-  padding: 5vw;
+  /* left: 0;
+  right: 0;
+  padding: 8vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  top: 0;
+  bottom: 0; */
+
+
 
 }

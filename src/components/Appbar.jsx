@@ -48,7 +48,12 @@ const Appbar = ({setTheme}) => {
             display: { xs: 'block', md: 'none' },
         }}>
               {pages.map((page) => (<MenuItem sx={{ color: "#222222" }} key={page} onClick={() => pagesOnClick(page)}>
-                  <Typography textAlign="center" >{page}</Typography>
+
+
+
+                         <Link activeClass="active" to={page} offset={-80}>
+                {page}
+                </Link>
                 </MenuItem>))}
             </Menu>
           </Box>
