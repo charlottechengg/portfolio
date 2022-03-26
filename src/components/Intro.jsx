@@ -11,7 +11,7 @@ const Intro = () => {
             <Background3D/>
             <Box
                 justifyContent="center" component="span" mt={10} className="Intro"
-                sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
+                sx={{ display: 'inline-block', mx: '2px', width:'60vw'}}
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" >👋 Hello! I am</Typography>
                 <Typography inline variant="h1" align="left" gutterBottom='true' color="textPrimary">Charlotte Cheng,</Typography>

@@ -69,7 +69,7 @@ const Projects = () => {
     return (
             <Box
                 id="projects" justifyContent="center" component="span" mt={10}
-                sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
+                sx={{ display: 'inline-block', mx: '2px', width:'60vw'}}
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>Feature Projects</Typography>
                 <Grid container sx={{ flexDirection: { xs: "column", md: "row"} }} alignItems="stretch" spacing={2}>

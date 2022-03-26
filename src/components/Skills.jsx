@@ -27,7 +27,7 @@ const Skills = () => {
     return (
             <Box
                 id="skills" justifyContent="center" component="span" mt={5}
-                sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
+                sx={{ display: 'inline-block', mx: '2px', width:'60vw'}}
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>My Backpack</Typography>
                 <Grid container direction="row" alignItems="flex-start" spacing={2}>

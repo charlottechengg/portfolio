@@ -17,7 +17,7 @@ const Contacts = () => {
     }
     return (
         <Box justifyContent="center" component="span" mt={5}
-        sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}>
+        sx={{ display: 'inline-block', mx: '2px', width:'60vw'}}>
             <Grid id="contacts" container spacing={2} mt={5} mb={2} columns={16} >
                 <Grid item xs={8}>
                     <Box justifyContent="flex-start" component="span"
