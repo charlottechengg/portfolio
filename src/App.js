@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-do
 function App() {
   return (
     // remove basename for dev
-    <Router className="app" >
+    <Router className="app" basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' exact element={<Home/>} />
         <Route path='/github' component={() => {
