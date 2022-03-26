@@ -44,6 +44,11 @@ function Home() {
             primary: "#ffffff"
           },
         },
+        menu: {
+          "& .MuiPaper-root": {
+            backgroundColor: "lightblue"
+          }
+        },
         typography: {
             h1: {
               fontWeight: 'bold',

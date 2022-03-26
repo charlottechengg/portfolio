@@ -11,6 +11,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import {Link} from 'react-scroll'
+import { styled } from '@mui/styles';
+import Paper from '@mui/material/Paper';
 
 
 
@@ -31,10 +33,11 @@ const Appbar = ({setTheme}) => {
     }
 
 
-    return (<AppBar position="sticky" sx={{ bgcolor: "#222222" }}>
+
+    return (<AppBar position="sticky" sx={{ background: "#222222"}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+        <Toolbar disableGutters >
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }} }>
             <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
               <MenuIcon />
             </IconButton>
@@ -45,14 +48,12 @@ const Appbar = ({setTheme}) => {
             vertical: 'top',
             horizontal: 'left',
         }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{
-            display: { xs: 'block', md: 'none' },
+            display: { xs: 'inline-block', md: 'none' },
         }}>
-              {pages.map((page) => (<MenuItem sx={{ color: "#222222" }} key={page} onClick={() => pagesOnClick(page)}>
+              {pages.map((page) => (<MenuItem sx={{bgcolor: "#262626"}} key={page} onClick={() => pagesOnClick(page)}>
 
-
-
-                         <Link activeClass="active" to={page} offset={-80}>
-                {page}
+                  <Link activeClass="active" to={page} offset={-80}>
+                  <Typography textAlign="center" >{page.toUpperCase()}</Typography>
                 </Link>
                 </MenuItem>))}
             </Menu>

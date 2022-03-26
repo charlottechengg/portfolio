@@ -9,7 +9,7 @@ const Intro = () => {
     return (
         <>
             <Background3D className="canvas"/>
-            <div style={{position: 'absolute', left: '50%', top: '12vh'}}>
+            <div style={{position: 'absolute', left: '50%', top: '8vh'}}>
 
             <Box
                 justifyContent="center" component="span" mt={10} className="Intro"

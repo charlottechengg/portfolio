@@ -8,6 +8,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.3",
+    "@mui/styles": "^5.5.1",
     "@react-three/drei": "^8.10.6",
     "@react-three/fiber": "^7.0.26",
     "@testing-library/jest-dom": "^5.16.2",
