@@ -1,4 +1,5 @@
 import { ThemeProvider, createTheme, responsiveFontSizes } from "@mui/material/styles";
+import useMediaQuery from '@mui/material/useMediaQuery';
 import CssBaseline from "@mui/material/CssBaseline";
 import Intro from '../components/Intro';
 import Appbar from '../components/Appbar';
@@ -7,6 +8,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import { Icon } from "@mui/material";
 import Contacts from "../components/Contacts";
+
 
 function Home() {
     let themeDark = createTheme()
@@ -45,15 +47,12 @@ function Home() {
         typography: {
             h1: {
               fontWeight: 'bold',
-              fontSize: '6.6rem',
             },
             h2: {
               fontWeight: 'bold',
-              fontSize: '3.3rem',
             },
             h3: {
               fontWeight: 'bold',
-              fontSize: '2.5rem',
             },
         },
         buttonIcon: {

@@ -72,17 +72,17 @@ const Projects = () => {
                 sx={{ display: 'inline-block', mx: '2px', width:'55vw'}}
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" gutterBottom>Feature Projects</Typography>
-                <Grid container direction="row" alignItems="stretch" spacing={2}>
-                    <Grid item xs={6} style={{display: 'flex'}}>
+                <Grid container sx={{ flexDirection: { xs: "column", md: "row"} }} alignItems="stretch" spacing={2}>
+                    <Grid item xs={12} md={6} style={{display: 'flex'}}>
                         <ProjectCard projectInfo={project1}/>
                     </Grid>
-                    <Grid item xs={6} style={{display: 'flex'}}>
+                    <Grid item xs={12} md={6} style={{display: 'flex'}}>
                         <ProjectCard  projectInfo={project2}/>
                     </Grid>
-                    <Grid item xs={6} style={{display: 'flex'}}>
+                    <Grid item xs={12} md={6} style={{display: 'flex'}}>
                         <ProjectCard projectInfo={project3}/>
                     </Grid>
-                    <Grid item xs={6} style={{display: 'flex'}}>
+                    <Grid item xs={12} md={6} style={{display: 'flex'}}>
                         <ProjectCard projectInfo={project4}/>
                     </Grid>
                 </Grid>
