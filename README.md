@@ -11,7 +11,7 @@
 
 ## About
 
-My personal portfolio website built with React.js, built with
+My personal portfolio website built with 
 - React.js
 - Node.js
 - CSS3
