@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Face from '@mui/icons-material/Face';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -64,12 +63,12 @@ const Appbar = ({setTheme}) => {
               </Button>))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-              {/* <Button onClick={setTheme} sx={{ my: 2, display: 'block', color: 'white'}}>
+          {/* <Box sx={{ flexGrow: 0 }}>
+              <Button onClick={setTheme} sx={{ my: 2, display: 'block', color: 'white'}}>
                   Theme
-              </Button> */}
+              </Button>
 
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>);
