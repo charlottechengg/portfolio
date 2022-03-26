@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 
 const skillList1 = ["JavaScript", "Python", "Bash", "Java", "Go"]
 const skillList2 = ["Swift", "React.js", "Express.js", "Matlab", "SQL"]
-const skillList3 = ["Git", "AWS", "Docker", "Jenkins", "Openshift"]
+const skillList3 = ["Git", "AWS", "Docker", "Jenkins", "Kubernetes"]
 
 const SkillSection = ({skills}) => {
     return(
