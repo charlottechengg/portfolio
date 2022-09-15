@@ -8,14 +8,14 @@ const project1 = {
   "Subtitle": "ElleHacks 2022 (Telus) First Place",
   "Description": "It is an innovative iOS app to help the community beat procrastination and focus with friends. It also encourages people to take some rest during their work, helping remote employees to disconnect from their work.",
   "Tech":["Swift 5", "SwiftUI", "CockroachDB", "Figma"],
-  "GithubLink":"manyicheng/FocusSpace",
+  "GithubLink":"charlottechengg/FocusSpace",
 }
 const project2 = {
   "ProjectName": "Friday",
   "Subtitle": "StormHacks2022 - Best Use of Google Cloud & Audience First Choice",
   "Description": "A web application to analyze sentiments and entities from user's text journal or audio journal, helping people with depression to identity their stressors. It also conveniently provides a standard depression screening for you to test.",
   "Tech":["React.js", "Express.js", "Firebase", "Google Cloud NL API", "Typescript", "AssemblyAI"],
-  "GithubLink":"manyicheng/Friday",
+  "GithubLink":"charlottechengg/Friday",
 }
 
 const project3 = {
@@ -23,7 +23,7 @@ const project3 = {
   "Subtitle": "Google Vision, React.js, Express.js, Firebase, Three.js",
   "Description": "A space for users to post, share and enjoy their special moments of life with people around the world. It utilizes google vision API to detect labels, web entity and landscape from image and label the post based on confidence score.",
   "Tech":["React.js", "AssemblyAI"],
-  "GithubLink":"manyicheng/P01nter",
+  "GithubLink":"charlottechengg/P01nter",
 }
 
 const project4 = {
@@ -31,7 +31,7 @@ const project4 = {
   "Subtitle": "React.js, Google Translation API, AssemblyAI",
   "Description": "A simple web app that records and transcribes the speech from a patient to a doctor, or vice versa. It is able to translate various languages.",
   "Tech":["React.js", "AssemblyAI"],
-  "GithubLink":"manyicheng/help-doc",
+  "GithubLink":"charlottechengg/help-doc",
 }
 
 

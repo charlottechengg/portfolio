@@ -5,8 +5,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 const contacts = [
-    {"link": "https://github.com/manyicheng", "icon": GitHubIcon},
-    {"link": "https://www.linkedin.com/in/manyicheng", "icon":LinkedInIcon},
+    {"link": "https://github.com/charlottechengg", "icon": GitHubIcon},
+    {"link": "https://www.linkedin.com/in/charlottechengg/", "icon":LinkedInIcon},
     {"link": "mailto:charlottecheng456@gmail.com", "icon":EmailIcon},
 ]
 const Contacts = () => {

@@ -17,8 +17,8 @@ const Intro = () => {
             >
                 <Typography inline variant="h3" align="left" color="textPrimary" >👋 Hello! I am</Typography>
                 <Typography inline variant="h1" align="left" gutterBottom='true' color="textPrimary">Charlotte Cheng,</Typography>
-                <Typography inline variant="h5" align="left"  gutterBottom='true' color="textPrimary">and I am a third year Software Engineering student at McMaster University.</Typography>
-                <Typography inline variant="h5" align="left" color="textPrimary">I am currently working as a Junior Backend Developer / DevOps Engineer at IBM. I've also volunteered at Illetonna as a NLP Program Manager in the past.</Typography>
+                <Typography inline variant="h5" align="left"  gutterBottom='true' color="textPrimary">and I am a fourth year Software Engineering student at McMaster University.</Typography>
+                <Typography inline variant="h5" align="left" color="textPrimary">I was previously employed at IBM as a Junior Backend Developer / DevOps Engineer. I've also volunteered at Illetonna as a NLP Program Manager in the past.</Typography>
             </Box>
             </div>
         </>
